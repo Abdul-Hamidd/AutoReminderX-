@@ -72,7 +72,7 @@ Authenticate once manually to generate token.pkl.
 
 🛠️ Installation & Setup
 1️⃣ Clone the Repository
-git clone https://github.com/Abdul-Hamidd/AutoReminderX-/edit/main/README.md
+git clone https://github.com/Abdul-Hamidd/AutoReminderX.git
 cd AutoReminderX
 
 2️⃣ Install Dependencies
