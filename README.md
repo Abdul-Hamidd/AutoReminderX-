@@ -10,22 +10,7 @@ Unlike traditional point-to-point Agent-to-Agent (A2A) tightly coupled architect
 
 Instead of passing heavy payloads directly between isolated agents, each autonomous worker reads from, computes, and writes back into a single structured, thread-safe `GraphState`.
 
-     ┌────────────────────────────────────────────────────────┐
-     │              Centralized GraphState (Memory Hub)        │
-     │  - raw_events []  - custom_drafts []  - status_flags   │
-     └───────────▲────────────────────▲────────────────────▲────┘
-                 │                    │                    │
-    (Read/Write) │       (Read/Write) │       (Read/Write) │
-                 ▼                    ▼                    ▼
-┌───────────────────┐        ┌───────────────────┐        ┌───────────────────┐
-│  Event Reader     │        │ Reminder Drafter  │        │  Reminder Sender  │
-│  Agent (Worker 1) │        │  Agent (Worker 2) │        │  Agent (Worker 3) │
-└─────────▲─────────┘        └───────────────────┘        └─────────┬─────────┘
-│ (API Ingestion)                                         │ (MIME Dispatch)
-┌─────────┴─────────┐                                     ┌─────────▼─────────┐
-│  Google Calendar  │                                     │     Gmail API     │
-└───────────────────┘                                     └───────────────────┘
-
+     
 <p align="center">
   <img src="System%20Architecture%20Diagram.png" alt="AutoReminderX Visual Workflow Diagram" width="850">
 </p>
