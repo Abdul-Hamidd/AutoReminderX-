@@ -26,6 +26,9 @@ Instead of passing heavy payloads directly between isolated agents, each autonom
 │  Google Calendar  │                                     │     Gmail API     │
 └───────────────────┘                                     └───────────────────┘
 
+<p align="center">
+  <img src="System%20Architecture%20Diagram.png" alt="AutoReminderX Visual Workflow Diagram" width="850">
+</p>
 
 ### 🧩 Autonomous Agent Breakdown
 
@@ -59,7 +62,7 @@ Instead of passing heavy payloads directly between isolated agents, each autonom
 
 ### 1. Repository Provisioning
 ```bash
-git clone [https://github.com/Abdul-Hamidd/AutoReminderX-.git](https://github.com/Abdul-Hamidd/AutoReminderX-.git)
+git clone https://github.com/Abdul-Hamidd/AutoReminderX-.git
 cd AutoReminderX-
 2. Dependency Resolution
 Bash
@@ -76,7 +79,7 @@ Drop credentials.json directly into the root workspace folder. On the first loca
 ▶️ Operational Execution
 To boot up the complete multi-agent graph pipeline and process the current temporal queue:
 
-Bash
+bash
 python main.py
 (Note: If utilizing the notebook architecture for step-by-step state verification, launch and execute all cells within building.ipynb)
 
